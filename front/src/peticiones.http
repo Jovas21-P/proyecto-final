@@ -1,0 +1,23 @@
+###
+GET  http://localhost:3001/
+###
+
+###
+//Haciendo un envio de datos
+POST http://localhost:3001/obtener
+Content-Type: application/json
+
+{
+    "nombre": "Jovanny",
+    "apellidos": "Martinez"
+}
+###
+GET http://localhost:3001/contacto
+###
+DELETE http://localhost:3001/obtener
+###
+
+###
+GET http://localhost:3001/contacto?nombre=Jovanny&apellidos=Perez&direccion=Calle1&telefono=123456&correo=jovanny@example.com
+
+###

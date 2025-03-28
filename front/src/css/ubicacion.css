@@ -1,0 +1,10 @@
+
+.pie-div {
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    height: 300px;
+    margin-top: 250px;
+    justify-content: center;
+    
+}
