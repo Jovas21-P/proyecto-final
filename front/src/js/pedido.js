@@ -1,3 +1,5 @@
+const BACK_URL = import.meta.env.VITE_BACKEND_URL;
+
 export function enviarDatos() {
     let cajas = document.getElementsByTagName('input')
     let datosPedido = {}
@@ -12,7 +14,7 @@ export function enviarDatos() {
     console.log(datosPedido)
     let json = JSON.stringify(datosPedido)
 
-    fetch('http://localhost:3001/pedido', {
+    fetch(`${BACK_URL   }/pedido`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -69,7 +71,7 @@ export function rellenarCampos() {
     }
 
     // Realizar la solicitud GET para obtener los datos del servidor según el teléfono
-    fetch(`http://localhost:3001/pedido/${telefono}`)
+    fetch(`${BACK_URL}/pedido/${telefono}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Error en la respuesta: ${response.status}`);

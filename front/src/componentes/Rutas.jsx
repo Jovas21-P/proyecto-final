@@ -4,7 +4,7 @@ import Inicio from "../Inicio";
 import QuienesSomos from "../QuienesSomos";
 import Servicios from "../Servicios";
 import Ubicacion from "../Ubicacion";
-import Contacto from "../contacto";
+import Contacto from "../Contacto";
 import Pedido from "../Pedido";
 
 export const Rutas = () => {

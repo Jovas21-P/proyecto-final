@@ -1,3 +1,5 @@
+const BACK_URL = import.meta.env.VITE_BACKEND_URL;
+
 export function traerDatos() {
     let cajas = document.getElementsByTagName('input');
     console.log(cajas);
@@ -14,7 +16,7 @@ export function traerDatos() {
 
     let json = JSON.stringify(datos);
 
-    fetch('http://localhost:3001/contacto', {
+    fetch(`${BACK_URL}/contacto`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
