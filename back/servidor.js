@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors')
+const {FRONTEND_URL, PORT} = require('./config.js')
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: FRONTEND_URL
+}));
 app.use(express.json());
 
 var datosSolicitud = []
@@ -64,6 +67,6 @@ app.get('/pedido', (req, res) => {
 
 });
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log('Servidor en puerto 3001');
 });
